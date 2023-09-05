@@ -4,12 +4,19 @@ const express = require("express");
 //Create Server
 const app = express();
 
-//Routes
-app.get("/", (req, res) => {
-    res.json({
-        ok: true
-    })    
-});
+//Public
+app.use(express.static("public"));
+
+
+
+
+
+// //Routes
+// app.get("/", (req, res) => {
+//     res.json({
+//         ok: true
+//     })    
+// });
 
 //Listen to requests
 
