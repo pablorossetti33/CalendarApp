@@ -1,4 +1,8 @@
 const express = require("express");
+require('dotenv').config();
+const {PORT} = process.env;
+
+console.log(process.env);
 
 
 //Create Server
@@ -6,9 +10,6 @@ const app = express();
 
 //Public
 app.use(express.static("public"));
-
-
-
 
 
 // //Routes
@@ -20,6 +21,6 @@ app.use(express.static("public"));
 
 //Listen to requests
 
-app.listen(4000, () =>{
-    console.log(`Listening on port ${ 4000 }` );
+app.listen(PORT, () =>{
+    console.log(`Listening on port ${ PORT  }` );
 })
