@@ -13,11 +13,7 @@ app.use(express.static("public"));
 
 
 // //Routes
-// app.get("/", (req, res) => {
-//     res.json({
-//         ok: true
-//     })    
-// });
+app.use("/api/auth", require("./routes/auth"))
 
 //Listen to requests
 
